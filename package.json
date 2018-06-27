@@ -1,0 +1,30 @@
+{
+  "name": "angular2",
+  "version": "1.0.0",
+  "description": "angular2 from coursera",
+  "main": "index.html",
+  "dependencies": {
+    "lite-server": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "npm run lite",
+    "lite": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thrilokkumarpallaki/angular2.git"
+  },
+  "keywords": [
+    "Angular2",
+    "JavaScript",
+    "NodeJs"
+  ],
+  "author": "thrilokkumar pallaki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thrilokkumarpallaki/angular2/issues"
+  },
+  "homepage": "https://github.com/thrilokkumarpallaki/angular2#readme"
+}
