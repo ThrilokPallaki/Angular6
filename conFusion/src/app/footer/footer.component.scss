@@ -1,0 +1,35 @@
+@mixin zero-margin($pad-up-down, $pad-left-right) {
+    margin: 0 auto;
+    padding: $pad-up-down, $pad-left-right;
+}
+.container{
+    display: flex;
+    background-color:#009688;
+    color:#E0F2F1;
+    @include zero-margin(20px, 0px);
+}
+.foot-header{
+    color:#E0F2F1;
+    font-size:120%;
+    font-family: Roboto, sans-serif;
+}
+a[mat-button]{
+    color:#fff;
+    font-size: small;
+}
+
+address{
+    line-height: 20px;
+    font-size:small;
+    
+}
+
+.btn-google-plus{color:#FFEBEE !important; background-color:#D32F2F !important;}
+.btn-facebook{color:#E8EAF6 !important; background-color:#3F51B5 !important;}
+.btn-twitter{color:#E3F2FD !important; background-color:#2196F3 !important;}
+.btn-youtube{color:#FFEBEE !important; background-color:#D32F2F !important;}
+.btn-gmail{color:#FFEBEE !important; background-color:#D32F2F !important;}
+.btn-linkedin{color:#E8EAF6 !important; background-color:#3F51B5 !important;}
+.btn-google-plus, .btn-facebook, .btn-twitter, .btn-youtube, .btn-linkedin{
+    margin-right:5px;
+}
