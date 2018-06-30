@@ -3,7 +3,7 @@ import { Dish } from './dish';
 export const DISHES: Dish[] = [
     {
         name: 'Uthappizza',
-        image: '/assets/images/uthappizza.png',
+        image: '/assets/images/uthappizza.jpg',
         category: 'mains',
         label: 'Hot',
         price: '4.99',
@@ -45,7 +45,7 @@ export const DISHES: Dish[] = [
     },
     {
         name: 'Zucchipakoda',
-        image: '/assets/images/zucchipakoda.png',
+        image: '/assets/images/zucchipakoda.jpg',
         category: 'appetizer',
         label: '',
         price: '1.99',
@@ -87,7 +87,7 @@ export const DISHES: Dish[] = [
     },
     {
         name: 'Vadonut',
-        image: '/assets/images/vadonut.png',
+        image: '/assets/images/vadonut.jpg',
         category: 'appetizer',
         label: 'New',
         price: '1.99',
@@ -129,7 +129,7 @@ export const DISHES: Dish[] = [
     },
     {
         name: 'ElaiCheese Cake',
-        image: '/assets/images/elaicheesecake.png',
+        image: '/assets/images/elaicheesecake.jpg',
         category: 'dessert',
         label: '',
         price: '2.99',
