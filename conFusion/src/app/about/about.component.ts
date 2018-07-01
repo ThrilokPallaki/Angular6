@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Author } from '../shared/author';
-import { AUTHORS } from '../shared/authors';
-import { AuthorsService } from '../services/authors.service';
+
+import { Leader } from '../shared/leader';
+import { LeadersService } from '../services/leaders.service';
 
 @Component({
   selector: 'app-about',
@@ -9,11 +9,13 @@ import { AuthorsService } from '../services/authors.service';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  authors: Author[];
-  constructor(private authorService:AuthorsService) { }
+
+  leaders: Leader[];
+
+  constructor(private leaderService: LeadersService) { }
 
   ngOnInit() {
-    this.authors = this.authorService.getAuthor();
+    this.leaders = this.leaderService.getLeaders();
   }
 
 }

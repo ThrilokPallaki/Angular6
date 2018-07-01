@@ -5,27 +5,39 @@ fxLayout.sm="column"
 fxLayout.xs="column" 
 fxLayoutGap="10px">
 
-<div fxFlex="50" fxLayout.sm="row" fxLayout="column">
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>{{dish.name | uppercase}}</mat-card-title>
-    </mat-card-header>
-    <img width="100%" src="{{dish.image}}" alt="Dish Picture">
-    <mat-card-content>
-      <p>{{dish.description}}</p>
-    </mat-card-content>
-  </mat-card>
-</div>
-<div fxFlex="50" fxLayout.sm="row" fxLayout="coulmn">
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>{{promotion.name | uppercase}}</mat-card-title>
-    </mat-card-header>
-    <img width="100%" src="{{promotion.image}}" alt="Promotion Image">
-    <mat-card-content>
-      <p>{{promotion.description}}</p>
-    </mat-card-content>
-  </mat-card>
-</div>
+  <div fxFlex="40" fxLayout.sm="row" fxLayout="column">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{dish.name | uppercase}}</mat-card-title>
+      </mat-card-header>
+      <img width="100%" src="{{dish.image}}" alt="Dish Picture">
+      <mat-card-content>
+        <p>{{dish.description}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div fxFlex="40" fxLayout.sm="row" fxLayout="coulmn">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{promotion.name | uppercase}}</mat-card-title>
+      </mat-card-header>
+      <img width="100%" src="{{promotion.image}}" alt="Promotion Image">
+      <mat-card-content>
+        <p>{{promotion.description}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxFlex="40" fxLayout.sm="row" fxLayout="coulmn">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{leader.name | uppercase}}</mat-card-title>
+      </mat-card-header>
+      <img width="100%" src="{{leader.image}}" alt="Leader Image">
+      <mat-card-content>
+        <p>{{leader.description}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
 
 </div>
