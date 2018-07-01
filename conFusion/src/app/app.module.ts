@@ -13,7 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 
 import 'hammerjs';
 
-// impporting components
+// Importing components
 
 import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
@@ -23,14 +23,15 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 
-// importing services
+// Importing services
 
 import { DishService } from './services/dish.service';
 import { AuthorsService } from './services/authors.service';
 
-//importing Modules
+// Importing Modules
 
 import { AppRouterModule } from './app-router/app-router.module';
+import { PromotionService } from './services/promotion.service';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { AppRouterModule } from './app-router/app-router.module';
     AboutComponent,
     ContactComponent
   ],
+
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -56,7 +58,8 @@ import { AppRouterModule } from './app-router/app-router.module';
     MatButtonModule,
     AppRouterModule
   ],
-  providers: [DishService, AuthorsService],
+
+  providers: [DishService, AuthorsService, PromotionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

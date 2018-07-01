@@ -8,7 +8,7 @@ export class AuthorsService {
 
   constructor() { }
 
-  getAuthor(): Author[]{
+  getAuthor(): Author[] {
     return AUTHORS;
   }
 }

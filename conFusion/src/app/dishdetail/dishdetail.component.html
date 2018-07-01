@@ -18,8 +18,9 @@
       {{dish.description}}
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button (click)="like()">{{dish.likes}} LIKE</button>
-      <button mat-button (click)="share()">{{dish.shares}} SHARE</button>
+      <button mat-raised-button (click)="like()">{{dish.likes}} Like</button>
+      <button mat-raised-button (click)="share()">{{dish.shares}} Share</button>
+      <button mat-raised-button (click)="goBack()">Back</button>
     </mat-card-actions>
   </mat-card>
  </div>
