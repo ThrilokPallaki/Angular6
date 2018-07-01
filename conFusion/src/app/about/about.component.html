@@ -1,3 +1,11 @@
-<p>
-  about works!
-</p>
+<div class="container">
+  <div class="card" *ngFor="let author of authors">
+    <div class="card-head">
+      <img src="{{author.image}}" alt="profile picture" class="card-image">
+      <h3>{{author.name}}</h3>
+    </div>
+    <div class="card-body">
+      <p>{{author.description}}</p>
+    </div>
+  </div>
+</div>

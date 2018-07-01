@@ -26,6 +26,7 @@ import { ContactComponent } from './contact/contact.component';
 // importing services
 
 import { DishService } from './services/dish.service';
+import { AuthorsService } from './services/authors.service';
 
 //importing Modules
 
@@ -55,7 +56,7 @@ import { AppRouterModule } from './app-router/app-router.module';
     MatButtonModule,
     AppRouterModule
   ],
-  providers: [DishService],
+  providers: [DishService, AuthorsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

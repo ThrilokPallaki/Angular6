@@ -1,6 +1,7 @@
 import { Comment } from './comment';
 
 export class Dish{
+	id:number;
 	name:string;
 	image:string;
 	category:string;
@@ -9,5 +10,6 @@ export class Dish{
 	description:string;
 	likes:number;
 	shares:number;
+	featured:boolean;
 	comments:Comment[];
 }

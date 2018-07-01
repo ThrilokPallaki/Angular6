@@ -2,6 +2,7 @@ import { Dish } from './dish';
 
 export const DISHES: Dish[] = [
     {
+        id: 0,
         name: 'Uthappizza',
         image: '/assets/images/uthappizza.jpg',
         category: 'mains',
@@ -10,6 +11,7 @@ export const DISHES: Dish[] = [
         description: 'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.',
         likes:0,
         shares:0,
+        featured:true,
         comments: [
             {
                 rating: 5,
@@ -44,6 +46,7 @@ export const DISHES: Dish[] = [
         ]
     },
     {
+        id: 1,
         name: 'Zucchipakoda',
         image: '/assets/images/zucchipakoda.jpg',
         category: 'appetizer',
@@ -52,6 +55,7 @@ export const DISHES: Dish[] = [
         description: 'Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy tamarind sauce',
         likes:0,
         shares:0,
+        featured:false,
         comments: [
             {
                 rating: 5,
@@ -86,6 +90,7 @@ export const DISHES: Dish[] = [
         ]
     },
     {
+        id: 2,
         name: 'Vadonut',
         image: '/assets/images/vadonut.jpg',
         category: 'appetizer',
@@ -94,6 +99,7 @@ export const DISHES: Dish[] = [
         description: 'A quintessential ConFusion experience, is it a vada or is it a donut?',
         likes:0,
         shares:0,
+        featured:false,
         comments: [
             {
                 rating: 5,
@@ -128,6 +134,7 @@ export const DISHES: Dish[] = [
         ]
     },
     {
+        id: 3,
         name: 'ElaiCheese Cake',
         image: '/assets/images/elaicheesecake.jpg',
         category: 'dessert',
@@ -136,6 +143,7 @@ export const DISHES: Dish[] = [
         description: 'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms',
         likes:0,
         shares:0,
+        featured:false,
         comments: [
             {
                 rating: 5,
