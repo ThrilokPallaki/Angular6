@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="login-header">
+    <span>Login</span>
+    <button mat-button mat-dialog-close>&times;</button>
+</mat-toolbar>
+<form class="loginForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input type="text" matInput name="username" placeholder="username" [(ngModel)]="user.username">
+  </mat-form-field>
+  <mat-form-field>
+    <input type="password" matInput name="password" placeholder="password" [(ngModel)]="user.password">
+  </mat-form-field>
+  <mat-checkbox name="remember" [(ngModel)]="user.remember">
+    Remember Me
+  </mat-checkbox>
+  <button type="submit" mat-button>submit</button>
+</form>

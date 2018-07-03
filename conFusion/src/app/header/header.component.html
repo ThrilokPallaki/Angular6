@@ -1,11 +1,17 @@
 <mat-toolbar class="toolbar">
-  <span><img src="/assets/images/logo.png" alt="Logo" width="50" height="40"></span>
-  <span> Ristorante Con Fusion</span>
-  <a routerLink="/home" routerLinkActive="active" mat-button class="nav-item"><i class="fa fa-home"></i> Home</a>
-  <a routerLink="/menu" routerLinkActive="active" mat-button class="nav-item"><i class="fa fa-bars"></i> Menu</a>
-  <a routerLink="/about" routerLinkActive="active" mat-button class="nav-item"><i class="fa fa-info"></i> About</a>
-  <a routerLink="/contact" routerLinkActive="active" mat-button class="nav-item"><i class="fa fa-vcard"> Contact</i></a>
-  <a href="https://www.google.com" mat-button class="nav-item"><i class="fa fa-google"> Google</i></a>
+  <div>
+    <span><img src="/assets/images/logo.png" alt="Logo" width="50" height="40"></span>
+    <span> Ristorante Con Fusion</span>
+    <a routerLink="/home" routerLinkActive="active" mat-button class="nav-item"><i class="fa fa-home"></i> Home</a>
+    <a routerLink="/menu" routerLinkActive="active" mat-button class="nav-item"><i class="fa fa-bars"></i> Menu</a>
+    <a routerLink="/about" routerLinkActive="active" mat-button class="nav-item"><i class="fa fa-info"></i> About</a>
+    <a routerLink="/contact" routerLinkActive="active" mat-button class="nav-item"><i class="fa fa-vcard"> Contact</i></a>
+    <a href="https://www.google.com" mat-button class="nav-item"><i class="fa fa-google"> Google</i></a>
+  </div>
+  <div>
+    <a mat-button class="nav-item" (click)="openLoginForm()"><i class="fa fa-sign-in"></i> Login</a>
+  </div>
+
 </mat-toolbar>
 <div class="container jumbotron"
 fxLayout="row"

@@ -8,6 +8,8 @@ body{
 }
 
 .toolbar{
+	display: flex;
+	justify-content: space-between;
 	background-color:#3F51B5;
 	color:#fff;
 	box-shadow:0 3px 10px rgba(0, 0, 0, 0.466);
