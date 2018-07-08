@@ -5,7 +5,10 @@
     fxLayoutAlign.gt-md="space-around center"
     fxLayoutGap="10px" 
     fxLayoutGap.xs="0">
-
+  <div [hidden]="dish">
+    <mat-progress-spinner mode="indeterminate" color="primary"></mat-progress-spinner>
+    <h4>Loding . . . Please Wait</h4>
+  </div>
  <div fxFlex="40" *ngIf="dish">
   <mat-card>
     <mat-card-header>
@@ -35,5 +38,4 @@
      </mat-list-item>
    </mat-list>
  </div>
-
 </div>

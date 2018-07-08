@@ -13,7 +13,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatProgressSpinnerModule } from '@angular/material';
 import 'hammerjs';
 
 // Importing components
@@ -67,7 +69,10 @@ import { AppRouterModule } from './app-router/app-router.module';
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    AppRouterModule
+    AppRouterModule,
+    MatSelectModule,
+    MatSlideToggleModule,
+    MatProgressSpinnerModule
   ],
   entryComponents: [
     LoginComponent

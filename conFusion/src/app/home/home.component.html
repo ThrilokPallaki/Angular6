@@ -5,7 +5,7 @@ fxLayout.sm="column"
 fxLayout.xs="column" 
 fxLayoutGap="10px">
 
-  <div fxFlex="40" fxLayout.sm="row" fxLayout="column">
+  <div fxFlex="40" fxLayout.sm="row" fxLayout="column" *ngIf="dish">
     <mat-card>
       <mat-card-header>
         <mat-card-title>{{dish.name | uppercase}}</mat-card-title>
@@ -16,7 +16,11 @@ fxLayoutGap="10px">
       </mat-card-content>
     </mat-card>
   </div>
-  <div fxFlex="40" fxLayout.sm="row" fxLayout="coulmn">
+  <div [hidden]="dish">
+    <mat-progress-spinner mode="indeterminate" color="primary"></mat-progress-spinner>
+    <h4>Loading. . .Please Wait</h4>
+  </div>
+  <div fxFlex="40" fxLayout.sm="row" fxLayout="coulmn" *ngIf="promotion">
     <mat-card>
       <mat-card-header>
         <mat-card-title>{{promotion.name | uppercase}}</mat-card-title>
@@ -27,8 +31,11 @@ fxLayoutGap="10px">
       </mat-card-content>
     </mat-card>
   </div>
-
-  <div fxFlex="40" fxLayout.sm="row" fxLayout="coulmn">
+  <div [hidden]="dish">
+    <mat-progress-spinner mode="indeterminate" color="primary"></mat-progress-spinner>
+    <h4>Loading. . .Please Wait</h4>
+  </div>
+  <div fxFlex="40" fxLayout.sm="row" fxLayout="coulmn" *ngIf="leader">
     <mat-card>
       <mat-card-header>
         <mat-card-title>{{leader.name | uppercase}}</mat-card-title>
@@ -39,5 +46,8 @@ fxLayoutGap="10px">
       </mat-card-content>
     </mat-card>
   </div>
-
+  <div [hidden]="dish">
+    <mat-progress-spinner mode="indeterminate" color="primary"></mat-progress-spinner>
+    <h4>Loading. . .Please Wait</h4>
+  </div>
 </div>

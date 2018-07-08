@@ -39,7 +39,7 @@ fxLayoutGap="10px">
       </div>
     </div>
   </div>
-  <div fxFlex>
+  <div fxFlex *ngIf="leaders">
     <div fxLayout="row">
       <mat-list>
         <mat-list-item *ngFor="let leader of leaders">
@@ -49,5 +49,9 @@ fxLayoutGap="10px">
         </mat-list-item>
       </mat-list>
     </div>
+  </div>
+  <div [hidden]="leaders">
+    <mat-progress-spinner color="primary" mode="indeterminate"></mat-progress-spinner>
+    <h4>Loding. . . Please Wait</h4>
   </div>
 </div>
