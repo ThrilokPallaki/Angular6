@@ -16,7 +16,7 @@
         <h1>{{dish.name | uppercase}}</h1>
       </mat-card-title>
     </mat-card-header>
-    <img class="image" src={{dish.image}} alt={{dish.name}}>
+    <img class="image" src="{{BaseURL + dish.image}}" alt={{dish.name}}>
     <mat-card-content>
       {{dish.description}}
     </mat-card-content>
@@ -24,11 +24,13 @@
       <button mat-raised-button (click)="like()">{{dish.likes}} Like</button>
       <button mat-raised-button (click)="share()">{{dish.shares}} Share</button>
       <button mat-raised-button (click)="goBack()">Back</button>
+      <button mat-raised-button [routerLink]="['/dishdetail', prev]"><i class="fa fa-chevron-left fa-lg"></i></button>
+      <button mat-raised-button [routerLink]="['/dishdetail', next]"><i class="fa fa-chevron-right fa-lg"></i></button>
     </mat-card-actions>
   </mat-card>
  </div>
 
- <div fxFlex="40" *ngIf="dish">
+ <div fxFlex="60" *ngIf="dish">
    <mat-list>
      <mat-list-item *ngFor="let comment of dish.comments">
       <h1 matLine>{{comment.author}}</h1>
@@ -36,6 +38,43 @@
       <p matLine>{{comment.comment}}</p>
       <span matLine>{{comment.date | date}}</span>
      </mat-list-item>
+      <mat-list-item *ngIf="commentForm.valid">
+        <h1 matLine>{{commentForm.get('author').value}}</h1>
+        <h3 matLine>{{commentForm.get('rating').value}} Stars</h3>
+        <p matLine>{{commentForm.get('comment').value}}</p>
+        <span matLine>{{commentForm.get('date').value | date}}</span>
+      </mat-list-item>
    </mat-list>
+   
+
+   <div fxFlex fxLayoutOffset="10px">
+     <h3>Customer comment Form</h3>
+     <form novalidate [formGroup]="commentForm" (ngSubmit)="onSubmitCommentForm()" #cf="ngForm" autocomplete="off">
+       <p>
+        <mat-form-field>
+          <input type="text" matInput formControlName="author" placeholder="AuthorName">
+          <mat-error *ngIf="formErrors.author">{{formErrors.author}}</mat-error>
+        </mat-form-field>
+       </p>
+       <p>
+         <label>rating</label><br>
+         <mat-slider formControlName="rating" min="1" max="5" step="1" tickInterval="1" thumbLabel></mat-slider>
+       </p>
+       <p>
+         <mat-form-field>
+           <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date">
+           <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+           <mat-datepicker #picker startView="month" [startAt]="startDate"></mat-datepicker>
+         </mat-form-field>
+       </p>
+       <p>
+         <mat-form-field>
+           <textarea matInput formControlName="comment"  rows="5" placeholder="Comment"></textarea>
+           <mat-error *ngIf="formErrors.comment">{{formErrors.comment}}</mat-error>
+         </mat-form-field>
+       </p>
+       <button mat-button color="primary" type="submit" [disabled]="commentForm.invalid">submit</button>
+     </form>
+    </div>
  </div>
 </div>

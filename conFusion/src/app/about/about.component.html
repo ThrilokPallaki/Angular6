@@ -1,6 +1,7 @@
 <div class="container" 
 fxLayout="column"  
-fxLayoutGap="10px">
+fxLayoutGap="10px"
+fxLayoutWrap>
 
   <div fxFlex>
     <div>
@@ -43,7 +44,7 @@ fxLayoutGap="10px">
     <div fxLayout="row">
       <mat-list>
         <mat-list-item *ngFor="let leader of leaders">
-          <img matListAvatar src="{{leader.image}}" alt="Profile picture">
+          <img matListAvatar src="{{BaseURL + leader.image}}" alt="Profile picture">
             <h3 matLine>{{leader.name}}</h3>
             <p matLine style="overflow-wrap:word-wrap">{{leader.description}}</p>
         </mat-list-item>

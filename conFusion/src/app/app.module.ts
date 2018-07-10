@@ -8,7 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
@@ -16,6 +16,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatProgressSpinnerModule } from '@angular/material';
+import { MatSliderModule } from '@angular/material';
+import { MatDatepickerModule, MatNativeDateModule } from '@angular/material';
 import 'hammerjs';
 
 // Importing components
@@ -34,6 +36,7 @@ import { LoginComponent } from './login/login.component';
 import { DishService } from './services/dish.service';
 import { PromotionService } from './services/promotion.service';
 import { LeadersService } from './services/leaders.service';
+import { baseURL } from './shared/baseURL';
 
 // Importing Modules
 
@@ -60,7 +63,7 @@ import { AppRouterModule } from './app-router/app-router.module';
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    HttpModule,
+    HttpClientModule,
     MatToolbarModule,
     MatDialogModule,
     MatGridListModule,
@@ -72,13 +75,16 @@ import { AppRouterModule } from './app-router/app-router.module';
     AppRouterModule,
     MatSelectModule,
     MatSlideToggleModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSliderModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   entryComponents: [
     LoginComponent
   ],
 
-  providers: [DishService, PromotionService, LeadersService],
+  providers: [DishService, PromotionService, LeadersService, { provide: 'BaseURL', useValue: baseURL}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

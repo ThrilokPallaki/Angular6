@@ -30,25 +30,28 @@
   <div fxFlex fxFlexOffset="20px" class="form-size">
       <h3>Send us your Feedback</h3>
   
-      <form novalidate [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <form novalidate [formGroup]="contactForm" (ngSubmit)="onSubmit()" #cForm="ngForm">
         <p>
           <mat-form-field class="half-width">
-            <input matInput formControlName="firstName" placeholder="First Name" type="text" required>
-            <mat-error *ngIf="contactForm.get('firstName').hasError('required') && contactForm.get('firstName').dirty">FirstName is required.</mat-error>
+            <input matInput formControlName="firstname" placeholder="First Name" type="text">
+            <mat-error [hidden]="!formErrors?.firstname">{{formErrors.firstname}}</mat-error>
           </mat-form-field>
+
           <mat-form-field class="half-width">
-            <input matInput formControlName="lastName" placeholder="Last Name" type="text" required>
-            <mat-error *ngIf="contactForm.get('lastName').hasError('required') && contactForm.get('lastName').touched">LastName is required.</mat-error>
+            <input matInput formControlName="lastname" placeholder="Last Name" type="text">
+            <mat-error [hidden]="!formErrors?.lastname">{{formErrors.lastname}}</mat-error>
           </mat-form-field>
         </p>
+
         <p>
           <mat-form-field class="half-width">
-            <input matInput formControlName="telnum" placeholder="Tel. Number" type="tel" required>
-            <mat-error *ngIf="contactForm.get('telnum').hasError('required') && contactForm.get('telnum').touched">Telephone is required.</mat-error>
+            <input matInput formControlName="telnum" placeholder="Tel. Number" type="tel">
+            <mat-error [hidden]="!formErrors?.telnum">{{formErrors.telnum}}</mat-error>
           </mat-form-field>
+
           <mat-form-field class="half-width">
-            <input matInput formControlName="email" placeholder="Email" type="email" required>
-            <mat-error *ngIf="contactForm.get('email').hasError('required') && contactForm.get('email').touched">Email is required.</mat-error>
+            <input matInput formControlName="email" placeholder="Email" type="email">
+            <mat-error [hidden]="!formErrors?.email">{{formErrors.email}}</mat-error>
           </mat-form-field>
         </p>
         <table class="form-size">
@@ -56,18 +59,16 @@
             <mat-slide-toggle formControlName="agree" color="primary">May we contact you?</mat-slide-toggle>
           </td>
           <td>
-            <mat-select placeholder="How?" formControlName="contacttype" required>
+            <mat-select placeholder="How?" formControlName="contacttype" >
               <mat-option *ngFor="let ctype of contacttypes" [value]="ctype">
                 {{ ctype }}
               </mat-option>
-              <mat-error *ngIf="contactForm.get('contacttype').hasError('required') && contactForm.get('contacttype').touched">ContactType is required.</mat-error>
             </mat-select>
           </td>
           </table>
         <p>
           <mat-form-field class="full-width">
             <textarea matInput formControlName="message" placeholder="Your Feedback" rows=5></textarea>
-            <mat-error *ngIf="contactForm.get('message').hasError('required') && contactForm.get('message').touched">Message is required.</mat-error>
           </mat-form-field>
         </p>
         <button type="submit" mat-button class="background-primary text-floral-white" [disabled]="contactForm.invalid">Submit</button>

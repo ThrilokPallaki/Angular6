@@ -10,7 +10,7 @@ fxLayoutGap="10px">
       <mat-card-header>
         <mat-card-title>{{dish.name | uppercase}}</mat-card-title>
       </mat-card-header>
-      <img width="100%" src="{{dish.image}}" alt="Dish Picture">
+      <img width="100%" src="{{BaseURL + dish.image}}" alt="Dish Picture">
       <mat-card-content>
         <p>{{dish.description}}</p>
       </mat-card-content>
@@ -25,7 +25,7 @@ fxLayoutGap="10px">
       <mat-card-header>
         <mat-card-title>{{promotion.name | uppercase}}</mat-card-title>
       </mat-card-header>
-      <img width="100%" src="{{promotion.image}}" alt="Promotion Image">
+      <img width="100%" src="{{BaseURL + promotion.image}}" alt="Promotion Image">
       <mat-card-content>
         <p>{{promotion.description}}</p>
       </mat-card-content>
@@ -40,7 +40,7 @@ fxLayoutGap="10px">
       <mat-card-header>
         <mat-card-title>{{leader.name | uppercase}}</mat-card-title>
       </mat-card-header>
-      <img width="100%" src="{{leader.image}}" alt="Leader Image">
+      <img width="100%" src="{{BaseURL + leader.image}}" alt="Leader Image">
       <mat-card-content>
         <p>{{leader.description}}</p>
       </mat-card-content>
